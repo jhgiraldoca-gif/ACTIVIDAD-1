@@ -1,0 +1,28 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("EDAD DE JUAN ES:");
+        double edjuan = scanner.nextDouble();
+        
+        double alberto = operaciones.edad_alberto(edjuan);
+        double ana = operaciones.edad_ana(edjuan);
+        double mama = operaciones.edad_mama(edjuan,alberto,ana);
+        System.out.println("Edad de juan" + edjuan);
+        System.out.println("edad de ana" + ana);
+        System.out.println("edad de mama" + mama);
+        System.out.println("edad de alberto: " + alberto);
+        
+    }
+}
+class operaciones {
+    public static double edad_alberto(double edjuan){
+        return edjuan * (2.0/3.0);
+    }
+    public static double edad_ana(double edjuan){
+        return edjuan* (4.0/3.0);
+    }
+    public static double edad_mama(double edjuan, double edad_ana, double edad_alberto){
+        return edjuan + edad_ana + edad_alberto;
+    }
+}
