@@ -1,0 +1,22 @@
+class Main {
+    public static void main(String[] args) {
+        double suma = 0;
+        double x = 20;
+        suma = operacion.calcu1(suma, x);
+        double y = 40;
+        x = operacion.calcu2(y,x);
+        suma = operacion.calcu3(suma,x,y);
+        System.out.println("RESULTADO ES: " + suma);
+    }
+}
+class operacion {
+    public static double calcu1 (double suma, double x){
+        return suma = suma + x;
+    }
+    public static double calcu2 (double y, double x){
+        return x = x + Math.pow(y,2);
+    }
+    public static double calcu3(double suma, double x, double y){
+        return suma = suma +(x/y);
+    }
+}
