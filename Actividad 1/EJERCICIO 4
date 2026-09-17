@@ -1,0 +1,21 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("INGRESE EL NUMERO A CALCULAR: ");
+        double x = scanner.nextDouble();
+        double y = operacion.cuadra(x);
+        double z = operacion.cub(x);
+        System.out.println("SU NUMERO ES: " + x);
+        System.out.println("EL CUADRADO ES: " + y);
+        System.out.println("EL CUBO ES: " + z);
+    }
+}
+class operacion{
+    public static double cuadra(double y){
+        return Math.pow(y,2);
+    }
+    public static double cub(double z){
+        return Math.pow(z,3);
+    }
+}
