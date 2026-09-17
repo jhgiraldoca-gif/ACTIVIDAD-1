@@ -1,0 +1,24 @@
+class Main {
+    public static void main(String[] args) {
+        double vh = 5000;
+        double hr = 48;
+        double reten = 0.125;
+        double salarb = operaciones.salario_bruto(hr, reten, vh);
+        double salarionet = operaciones.salario_neto(hr, vh);
+        double retenci = operaciones.retencion(vh, hr, reten);
+        System.out.println("EL SALARIO BRUTO ES: " + salarb);
+        System.out.println("EL SALARIO NETO ES: "+ salarionet);
+        System.out.println("LA RETENCION ES:"+ retenci);
+    }
+}
+class operaciones {
+    public static double salario_bruto(double hr, double reten, double vh){
+        return (hr * vh) - ((hr * vh) * reten);
+    }
+    public static double salario_neto(double hr, double vh){
+        return vh * hr;
+    }
+    public static double retencion(double vh, double hr, double reten){
+        return (vh * hr) * reten;
+    }
+}
